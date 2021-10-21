@@ -2,3 +2,37 @@
     box-sizing: border-box;
 }
 
+/* TYPOGRAPHY */ 
+
+@font-face {
+    font-family: eurofurence;
+    src: url(/fonts/eurofurence/eurofurence\ \ regular\ 500.ttf);
+}
+
+@font-face {
+    font-family: champagne_limousines;
+    src: url(/fonts/champagne_limousines/Champagne\ &\ Limousines\ Bold\ 700.ttf);
+}
+
+@font-face {
+    font-family: lato;
+    src: url(/fonts/lato/Lato-Regular.ttf);
+}
+
+
+
+html {
+    font-family: lato, sans-serif;
+    color: #606060;
+}
+
+
+
+
+
+
+
+
+.main-header .logo {
+    font-family: eurofurence, Arial, Helvetica, sans-serif;
+}
