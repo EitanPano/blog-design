@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="main-screen" onclick="toggleMenu()"></div>
+    <!-- <div class="main-screen" onclick="toggleMenu()"></div> -->
     <header class="main-header fixed">
         <div class="main-header main-layout flex align-center space-between fixed">
             <div class="logo">Blogin<span class="logo-dot">.</span></div>
-            <ul class="main-nav flex align-center clean-list">
+            <ul class="main-nav flex align-center clean-list main-screen" onclick="toggleMenu()">
                 <li><a href="#">Journal</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Work</a></li>
@@ -90,8 +90,10 @@
 
 
     <script>
-        function toggleMenu() {
+        function toggleMenu(el) {
             document.body.classList.toggle('menu-open');
+            const elBtnMenu = document.querySelector('.btn-menu');
+            elBtnMenu.innerText = (elBtnMenu.innerText === 'X') ? '☰' : 'X';
         }
     </script>
 </body>
