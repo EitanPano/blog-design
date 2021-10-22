@@ -167,11 +167,37 @@ a {
     color: #c2c2c2;
     padding: 0.6rem 1.5625rem;
     transition: all 0.2s;
+    display: block;
 }
 
 .card-btn:hover {
     color: #58c93a;
     border-color: #58c93a;
+    animation: myScratch ease-in-out;
+    animation-duration: 0.5s;
+}
+
+.card-btn:hover>.hidden-arrow {
+    margin-left: 0rem;
+    transition: all 0.2s;
+    opacity: 1;
+    animation-name: myScratch;
+    animation-duration: 0.4s;
+    animation-delay: 0.1s;
+}
+
+.hidden-arrow {
+    opacity: 0;
+    display: inline-block;
+    margin-left: -1rem;
+    transition: all 0.2s;
+
+}
+
+@keyframes myScratch {
+    0%   {margin-left: 0rem;}
+    50%  {margin-left: 1rem;}
+    100% {margin-left: 0rem;}
 }
 
 /* main pagination */
