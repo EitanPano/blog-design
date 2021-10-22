@@ -92,6 +92,7 @@
     <script>
         function toggleMenu(el) {
             document.body.classList.toggle('menu-open');
+            document.body.classList.toggle('noscroll');
             const elBtnMenu = document.querySelector('.btn-menu');
             elBtnMenu.innerText = (elBtnMenu.innerText === 'X') ? '☰' : 'X';
         }
