@@ -6,22 +6,22 @@
 
 @font-face {
     font-family: eurofurence;
-    src: url(/fonts/eurofurence/eurofurence\ \ regular\ 500.ttf);
+    src: url(./fonts/eurofurence/eurofurence\ \ regular\ 500.ttf);
 }
 
 @font-face {
     font-family: champagne_limousines;
-    src: url(/fonts/champagne_limousines/Champagne\ &\ Limousines\ Bold\ 700.ttf);
+    src: url(./fonts/champagne_limousines/Champagne\ &\ Limousines\ Bold\ 700.ttf);
 }
 
 @font-face {
     font-family: lato;
-    src: url(/fonts/lato/Lato-Regular.ttf);
+    src: url(./fonts/lato/Lato-Regular.ttf);
 }
 
 @font-face {
     font-family: lato-bold;
-    src: url(/fonts/lato/Lato-Bold.ttf);
+    src: url(./fonts/lato/Lato-Bold.ttf);
 }
 
 /* BASIC */
@@ -34,6 +34,11 @@ html {
 
 body {
     margin: 0;
+    /* direction: rtl; */
+}
+
+.rtl {
+    display: inline-block;
     /* direction: rtl; */
 }
 
@@ -308,18 +313,6 @@ a {
 
 /* Mobile Only */
 
-body.menu-open .main-screen {
-    pointer-events: auto;
-    opacity: 1;
-}
-
-.main-screen {
-    background-color: rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    pointer-events: none;
-    opacity: 0;
-}
-
 @media (max-width: 768px) {
     /* btn-menu */
 
@@ -382,7 +375,7 @@ body.menu-open .main-screen {
     .card-image {
         max-width: 100%;
         max-height: 370px;
-        margin: 0;
+        padding: 0 0 0.5rem 0;
     }
     .card-text {
         margin: 0;
