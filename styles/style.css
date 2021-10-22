@@ -56,6 +56,7 @@ p {
 }
 
 a {
+    display: block;
     color: inherit;
     text-decoration: none;
     letter-spacing: 0.08rem;
@@ -74,19 +75,31 @@ a {
 /* main header */
 
 .main-header {
-    height: 131px;
+    height: 12vh;
     background-color: #292929;
     border-bottom: 5px solid #1e1e1e;
 }
 
+.main-header.fixed {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
 .main-header .logo {
-    font-size: 2.5rem;
     padding-left: 4px;
     color: #fff;
+}
+
+/* logo */
+
+.logo {
+    font-size: 2.5rem;
     font-family: eurofurence, sans-serif;
 }
 
-.main-header .logo-dot {
+.logo .logo-dot {
     color: #58c93a;
 }
 
@@ -101,7 +114,6 @@ a {
     height: calc(100% + 10px);
     align-items: center;
     border-left: 1px solid #1d1d1d;
-
 }
 
 .main-nav a {
@@ -186,6 +198,8 @@ a {
     border-color: #58c93a;
 }
 
+/* main pagination */
+
 .main-pagination {
     height: 4.8125rem;
     border-top: 1px solid #e1e0e0;
@@ -205,17 +219,88 @@ a {
     color: #58c93a;
 }
 
+/* copyrights */
+
+.copyrights {
+    height: 19.75rem;
+    border-top: 1px solid #e1e0e0;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    padding: 3.5rem 0;
+}
+
+.copyrights .logo {
+    color: #292929;
+}
+
+.copyrights p {
+    color: #a6a6a6;
+    font-size: 0.8125rem;
+    font-weight: bold;
+}
+
+.copyrights p span {
+    color: #939292;
+}
+
+/* bottom-nav */
+.bottom-nav {
+    text-align: center;
+}
+
+.bottom-nav .icon {
+    margin: 0 0.7rem;
+    opacity: 0.4;
+    transition: opacity 0.1s;
+}
+
+.bottom-nav .icon:hover {
+    opacity: initial;
+}
+
+.icon {
+    width: 41px;
+    height: 41px;
+    padding: 1px 0 0 0;
+    border-radius: 2px;
+}
+
+.facebook-icon {
+    background-color: #516fad;
+}
+
+.twitter-icon {
+    background-color: #41a1f2;
+}
+
+.behance-icon {
+    background-color: #1d63f8;
+}
+
+.ball-icon {
+    background-color: rgb(180, 180, 180);
+}
+
+.ball-icon img {
+    border-radius: 50%;
+}
+.bottom-nav .icon img {
+    width: 17px;
+    height: 17px;
+}
+
 /* HELPERS */
+
+/* text */
+
+.text-center {
+    text-align: center;
+}
 
 /* fixed */
 
 .fixed {
-    clear: both;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
 }
 
 /* flex */
@@ -232,6 +317,14 @@ a {
     justify-content: space-between;
 }
 
+.flex.space-evenly {
+    justify-content: space-evenly;
+}
+
+.flex.justify-center {
+    justify-content: center;
+}
+
 /* list helpers */
 
 .clean-list {
@@ -239,6 +332,10 @@ a {
     padding: 0;
     list-style-type: none;
 }
+
+/* Blueprints */
+
+/* Mobile Only */
 
 @media (max-width: 768px) {
     .main-layout {
@@ -263,6 +360,20 @@ a {
     }
     .card-text {
         margin: 0;
-        margin-bottom: 5rem;
+        margin-bottom: 3.8rem;
+    }
+}
+
+/* large */
+
+@media (min-width: 1028px) {
+    .main-layout {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+    .main-header {
+        height: 131px;
+        background-color: #292929;
+        border-bottom: 5px solid #1e1e1e;
     }
 }

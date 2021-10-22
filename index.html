@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="main-screen" onclick="toggleMenu()"></div>
     <header class="main-header fixed">
         <div class="main-header main-layout flex align-center space-between fixed">
             <div class="logo">Blogin<span class="logo-dot">.</span></div>
@@ -19,6 +20,7 @@
                 <li><a href="#">Work</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
@@ -75,17 +77,23 @@
         <a href="#">next ➝</a>
     </nav>
 
-    <footer>
-        <div class="logo">Blogin.</div>
-        <div class="copyrights">© 2014 Blogin.com  -  All Rights Reserved  -  Find more free Templates at Pixelhint.com</div>
-        <ul class="bottom-nav">
-            <li><a href=""><img src="icons/facebook.png" alt="facebook_icon"></a></li>
-            <li><a href=""><img src="icons/twitter.png" alt="twitter_icon"></a></li>
-            <li><a href=""><img src="icons/be.png" alt="Be_icon"></a></li>
-            <li><a href=""><img src="icons/ball.png" alt="ball_icon"></a></li>
+    <footer class="copyrights text-center flex align-center space-evenly">
+        <div class="logo">Blogin<span class="logo-dot">.</span></div>
+        <p>© 2014 Blogin.com  -  All Rights Reserved  -  Find more free Templates at <span>Pixelhint.com</span></p>
+        <ul class="bottom-nav clean-list flex justify-center">
+            <li><a class="icon facebook-icon flex align-center justify-center" href=""><img src="icons/facebook-logo.png" alt="facebook_icon"></a></li>
+            <li><a class="icon twitter-icon flex align-center justify-center" href=""><img src="icons/twitter-logo.png" alt="twitter_icon"></a></li>
+            <li><a class="icon behance-icon flex align-center justify-center" href=""><img src="icons/behance-logo.png" alt="behance_icon"></a></li>
+            <li><a class="icon ball-icon flex align-center justify-center" href=""><img src="icons/ball-logo.png" alt="ball_icon"></a></li>
         </ul>
     </footer>
 
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+        }
+    </script>
 </body>
 
 </html>
