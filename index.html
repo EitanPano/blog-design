@@ -37,7 +37,7 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                     pariatur...
                 </p>
-                <a href="" class="card-btn">Continue Reading <span class="hidden-arrow">➝</span></a>
+                <a onclick="toggleModalNewsletter(event)" href="" class="card-btn">Continue Reading <span class="hidden-arrow">➝</span></a>
             </div>
         </div>
         <div class="card flex">
@@ -52,7 +52,7 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                     pariatur...
                 </p>
-                <a href="" class="card-btn">Continue Reading <span class="hidden-arrow">➝</span></a>
+                <a onclick="toggleModalNewsletter(event)" href="" class="card-btn">Continue Reading <span class="hidden-arrow">➝</span></a>
             </div>
         </div>
         <div class="card flex">
@@ -67,7 +67,7 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                     pariatur...
                 </p>
-                <a href="" class="card-btn">Continue Reading <span class="hidden-arrow">➝</span></a>
+                <a onclick="toggleModalNewsletter(event)" href="" class="card-btn">Continue Reading <span class="hidden-arrow">➝</span></a>
             </div>
         </div>
     </main>
@@ -77,24 +77,58 @@
         <a href="#">next ➝</a>
     </nav>
 
+    <section onclick="toggleModalNewsletter(event)" class="modal-newsletter modal-closed fixed">
+        <!-- onclick="toggleModalNewsletter(event)" -->
+        <form onclick="event.stopPropagation()" class="flex text-center" onsubmit="">
+            <h2>Join us to get access to the latest stories!</h2>
+            <p class="">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <br><br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur...
+            </p>
+            <input id="email-input" name="email-input" type="email" placeholder="Yourmail@mail.com">
+            <div class="btn-container">
+                <button onclick="toggleModalNewsletter(event)" class="btn btn-close">Close</button>
+                <button onclick="testButton()" class="btn btn-submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
     <footer class="copyrights text-center flex align-center space-evenly">
         <div class="logo">Blogin<span class="logo-dot">.</span></div>
-        <p>© 2014 Blogin.com  -  All Rights Reserved  -  Find more free Templates at <span>Pixelhint.com</span></p>
+        <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span>Pixelhint.com</span></p>
         <ul class="bottom-nav clean-list flex justify-center">
-            <li><a class="icon facebook-icon flex align-center justify-center" href=""><img src="icons/facebook-logo.png" alt="facebook_icon"></a></li>
-            <li><a class="icon twitter-icon flex align-center justify-center" href=""><img src="icons/twitter-logo.png" alt="twitter_icon"></a></li>
-            <li><a class="icon behance-icon flex align-center justify-center" href=""><img src="icons/behance-logo.png" alt="behance_icon"></a></li>
-            <li><a class="icon ball-icon flex align-center justify-center" href=""><img src="icons/ball-logo.png" alt="ball_icon"></a></li>
+            <li><a class="icon facebook-icon flex align-center justify-center" href=""><img
+                        src="icons/facebook-logo.png" alt="facebook_icon"></a></li>
+            <li><a class="icon twitter-icon flex align-center justify-center" href=""><img src="icons/twitter-logo.png"
+                        alt="twitter_icon"></a></li>
+            <li><a class="icon behance-icon flex align-center justify-center" href=""><img src="icons/behance-logo.png"
+                        alt="behance_icon"></a></li>
+            <li><a class="icon ball-icon flex align-center justify-center" href=""><img src="icons/ball-logo.png"
+                        alt="ball_icon"></a></li>
         </ul>
     </footer>
 
 
     <script>
         function toggleMenu(el) {
-            document.body.classList.toggle('menu-open');
-            document.body.classList.toggle('noscroll');
+            const elBody = document.body;
+            elBody.classList.toggle('menu-open');
+            if (!elBody.classList.contains('noscroll')) elBody.classList.toggle('noscroll');
             const elBtnMenu = document.querySelector('.btn-menu');
             elBtnMenu.innerText = (elBtnMenu.innerText === 'X') ? '☰' : 'X';
+        }
+        function toggleModalNewsletter(ev) {
+            ev.preventDefault();
+
+            const elModalNewsletter = document.querySelector('.modal-newsletter');
+            elModalNewsletter.classList.toggle('modal-closed');
+            document.body.classList.toggle('noscroll');
+        }
+        function testButton() {
+            alert('Working');
         }
     </script>
 </body>
