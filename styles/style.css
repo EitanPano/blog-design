@@ -443,7 +443,7 @@ form .btn-close:hover {
 
 /* Mobile Only */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     /* btn-menu */
 
     .btn-menu {
