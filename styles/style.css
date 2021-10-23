@@ -389,7 +389,7 @@ form .btn-close:hover {
 .flip180 {
     transform: rotate(180deg);
     display: inline-block;
-    padding-bottom: 0.5px;
+    padding-bottom: 1.2px;
     /* align-self: center; */
 }
 
