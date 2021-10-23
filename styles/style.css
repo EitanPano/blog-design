@@ -191,8 +191,9 @@ a {
     display: inline-block;
     margin-left: -1rem;
     transition: all 0.2s;
-
 }
+
+
 
 @keyframes myScratch {
     0%   {margin-left: 0rem;}
@@ -293,11 +294,19 @@ a {
 
 /* HELPERS */
 
-.noscroll {
-    overflow: hidden;
+/* rotate */
+
+.flip180 {
+    transform: rotate(180deg);
+    display: inline-block;
+    padding-bottom:2px;
 }
 
 /* text */
+
+.noscroll {
+    overflow: hidden;
+}
 
 .text-center {
     text-align: center;
