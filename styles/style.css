@@ -157,8 +157,28 @@ form .btn-close:hover {
 }
 
 .main-nav li {
-    height: 15%;
+    height: 5rem;
     width: 100%;
+}
+
+.dropdown-menu {
+    flex-direction: column;
+    background-color: #3a3a3a;
+    font-size: 0.8em;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+.main-header .dropdown-menu li {
+    height: 40px;
+    background-color: #3a3a3a;
+}
+
+ul .dropdown-menu {
+    display: none;
+}
+
+li:hover + .dropdown-menu, .dropdown-menu:hover {
+    display: block;
 }
 
 .main-nav a {
@@ -491,6 +511,9 @@ form .btn-close:hover {
         height: 11vh;
         padding: 0 1rem;
     }
+    .dropdown-menu {
+        width: 100%;
+    }
 
     .main-content {
         margin-top: 11vh;
@@ -528,15 +551,20 @@ form .btn-close:hover {
     .main-nav li {
         height: calc(100% + 10px);
         border-left: 1px solid #1d1d1d;
+        width: 132px;
     }
     .main-nav a {
-        width: 132px;
+        width: 100%;
         height: 100%;
         justify-content: center;
         align-items: center;
     }
     .main-nav li:last-child {
         border-right: 1px solid #1d1d1d;
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: 12vh;
     }
     .main-content {
         padding-top: 4rem;
@@ -586,6 +614,9 @@ form .btn-close:hover {
         height: 8.1875rem;
         background-color: #292929;
         border-bottom: 5px solid #1e1e1e;
+    }
+    .dropdown-menu {
+        top: 8.1875rem;
     }
     .main-content {
         margin-top: 8.1875rem;
