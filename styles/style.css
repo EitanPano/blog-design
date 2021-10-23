@@ -136,7 +136,12 @@ form .btn-close:hover {
 
 .main-header .logo {
     padding-left: 4px;
+    cursor: pointer;
     color: #fff;
+    transition: all 0.2s ease-out;
+}
+.main-header .logo:hover {
+    text-shadow: 0 0 8px white;
 }
 
 /* logo */
@@ -144,6 +149,7 @@ form .btn-close:hover {
 .logo {
     font-size: 2.5rem;
     font-family: eurofurence, sans-serif;
+    letter-spacing: -0.5px;
 }
 
 .logo .logo-dot {
@@ -593,8 +599,5 @@ form .btn-close:hover {
     }
     .card-text {
         margin-top: 5vh;
-    }
-    .modal-newletter {
-        /* top: 8.1875rem; */
     }
 }
