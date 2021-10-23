@@ -299,7 +299,8 @@ a {
 .flip180 {
     transform: rotate(180deg);
     display: inline-block;
-    padding-bottom:2px;
+    padding-bottom:0.5px;
+    /* align-self: center; */
 }
 
 /* text */
