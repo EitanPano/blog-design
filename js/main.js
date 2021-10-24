@@ -19,9 +19,13 @@ function testButton() {
     alert("Working");
 }
 
-function navigateJournal(ev) {
+let dropDownType;
+function doNavigate(ev, el) {
     ev.preventDefault();
     ev.stopPropagation();
+    console.log(ev.pointerType);
 
-    // alert('Navigate to Journal page');
+    if (dropDownType === ev.pointerType) alert(`Navigate into ${el.innerText}`);
+    else if (ev.pointerType === 'mouse') alert(`Navigate into ${el.innerText}`);
+    dropDownType = ev.pointerType;
 }
