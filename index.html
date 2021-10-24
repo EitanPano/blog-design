@@ -12,16 +12,19 @@
 <body>
     <!-- <div class="main-screen" onclick="toggleMenu()"></div> -->
     <header class="main-header fixed">
-        <div class="main-header main-layout flex align-center space-between fixed">
+        <div class="main-layout flex space-between align-center">
             <a href="" class="logo">Blogin<span class="logo-dot">.</span></a>
-            <ul class="main-nav flex align-center clean-list main-screen" onclick="toggleMenu()">
-                <li><a onclick="doNavigate(event, this)" href="">Journal</a></li>
-                <ul class="flex dropdown-menu clean-list">
-                    <li><a href="">October 2016</a></li>
-                    <li><a href="">January 2017</a></li>
-                    <li><a href="">April 2017</a></li>
-                    <li><a href="">July 2017</a></li>
-                </ul>
+            <ul class="main-nav flex clean-list text-center" onclick="toggleMenu()">
+                <li class="dropdown-menu">
+                    <a onclick="doNavigate(event, this)" href="">Journal</a>
+                    <ul class="clean-list">
+                        <li><a href="">October 2016</a></li>
+                        <li><a href="">January 2017</a></li>
+                        <li><a href="">April 2017</a></li>
+                        <li><a href="">July 2017</a></li>
+                    </ul>
+                </li>
+                
                 <li><a href="">About</a></li>
                 <li><a href="">Work</a></li>
                 <li><a href="">Contact</a></li>
@@ -33,7 +36,7 @@
     <main class="main-content main-layout">
         <div class="card flex">
             <img src="img/001.png" alt="" class="card-image" />
-            <div class="card-content">
+            <div class="card-content flex">
                 <h2 class="card-title">Duis aute irure dolor in
                     henderit in voluptate.</h2>
                 <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -43,13 +46,13 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                     pariatur...
                 </p>
-                <a onclick="toggleModalNewsletter(event)" href="" class="card-btn">Continue Reading <span
+                <a onclick="toggleModalNewsletter(event)" href="" class="btn-read-more">Continue Reading <span
                         class="hidden-arrow">➝</span></a>
             </div>
         </div>
         <div class="card flex">
             <img src="img/002.png" alt="" class="card-image" />
-            <div class="card-content">
+            <div class="card-content flex">
                 <h2 class="card-title">Duis aute irure dolor in
                     henderit in voluptate.</h2>
                 <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -59,13 +62,13 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                     pariatur...
                 </p>
-                <a onclick="toggleModalNewsletter(event)" href="" class="card-btn">Continue Reading <span
+                <a onclick="toggleModalNewsletter(event)" href="" class="btn-read-more">Continue Reading <span
                         class="hidden-arrow">➝</span></a>
             </div>
         </div>
         <div class="card flex">
             <img src="img/003.png" alt="" class="card-image" />
-            <div class="card-content">
+            <div class="card-content flex">
                 <h2 class="card-title">Duis aute irure dolor in
                     henderit in voluptate.</h2>
                 <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -75,7 +78,7 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                     pariatur...
                 </p>
-                <a onclick="toggleModalNewsletter(event)" href="" class="card-btn">Continue Reading <span
+                <a onclick="toggleModalNewsletter(event)" href="" class="btn-read-more">Continue Reading <span
                         class="hidden-arrow">➝</span></a>
             </div>
         </div>

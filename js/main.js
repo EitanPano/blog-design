@@ -12,7 +12,7 @@ function toggleModalNewsletter(ev) {
 
     const elModalNewsletter = document.querySelector(".modal-newsletter");
     elModalNewsletter.classList.toggle("modal-closed");
-    document.body.classList.toggle("noscroll");
+    // document.body.classList.toggle("noscroll");
 }
 
 function testButton() {
