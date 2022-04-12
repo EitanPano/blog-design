@@ -1,5 +1,5 @@
 # blog-design
 
-Pixel perfect blog layout project
+Pixel perfect, fully responsive blog design.
 
 https://eitanpano.github.io/blog-design/
